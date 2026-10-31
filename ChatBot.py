@@ -1,4 +1,4 @@
-from dotenv import  load_dotenv
+
 import streamlit as st
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate , MessagesPlaceholder
@@ -28,7 +28,6 @@ for message in st.session_state.chat_history:
 #llm init
 llm = ChatOpenAI(
     model = "gpt-6.1-terra",
-    api_key= os.getenv("AVALAI_API_KEY"),
     base_url="https://api.avalai.ir/v1",
     temperature=0,
 
